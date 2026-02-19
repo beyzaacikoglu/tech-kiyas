@@ -153,9 +153,17 @@
 
 .tk-grid{
   display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 }
+
+@media (min-width: 1200px){
+  .tk-grid{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
 
 .tk-card{
   border-radius: 16px;
@@ -319,4 +327,42 @@
 
 .tk-compareVal{
   opacity: .95;
+}
+/* ===== Karşılaştırma sayfası masaüstü fix ===== */
+.tk-main {
+  display: flex;
+  justify-content: center;
+}
+
+.tk-grid {
+  width: 100%;
+  max-width: 1100px;   /* <<< EN KRİTİK SATIR */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+}
+/* ===== Karşılaştırma Grid (YAN YANA – GENİŞ) ===== */
+
+.tk-compareGrid {
+  display: grid;
+  gap: 16px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(320px, 1fr);
+  align-items: stretch;
+}
+
+.tk-compareCard {
+  border-radius: 18px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  padding: 18px;
+  min-height: 100%;
+}
+
+@media (max-width: 980px) {
+  .tk-compareGrid {
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+  }
 }

@@ -68,3 +68,74 @@ export const chargers = [
 
 export const brands = ["Spigen", "Anker", "Ugreen", "Baseus"];
 export const powerOptions = [20, 30, 40, 45, 65, 100];
+export const powerbanks = [
+  {
+    id: "pb-anker-10k",
+    name: "Anker PowerCore 10000",
+    brand: "Anker",
+    capacityMah: 10000,
+    maxOutputW: 12,
+    ports: "1x USB-A",
+    pd: false,
+    pps: false,
+    price: 899,
+    score: 8.0,
+    tags: ["Kompakt", "Günlük"],
+  },
+  {
+    id: "pb-anker-20k-pd",
+    name: "Anker 20000 PD",
+    brand: "Anker",
+    capacityMah: 20000,
+    maxOutputW: 20,
+    ports: "1x USB-C + 1x USB-A",
+    pd: true,
+    pps: false,
+    price: 1499,
+    score: 8.6,
+    tags: ["PD", "Yüksek Kapasite"],
+  },
+  {
+    id: "pb-ugreen-10k-pps",
+    name: "Ugreen 10000 20W",
+    brand: "Ugreen",
+    capacityMah: 10000,
+    maxOutputW: 20,
+    ports: "1x USB-C + 1x USB-A",
+    pd: true,
+    pps: true,
+    price: 999,
+    score: 8.4,
+    tags: ["PPS", "Hızlı Şarj"],
+  },
+  {
+    id: "pb-xiaomi-20k",
+    name: "Xiaomi 20000 22.5W",
+    brand: "Xiaomi",
+    capacityMah: 20000,
+    maxOutputW: 22.5,
+    ports: "2x USB-A + 1x USB-C",
+    pd: true,
+    pps: false,
+    price: 1099,
+    score: 8.2,
+    tags: ["F/P", "Yüksek Kapasite"],
+  },
+  {
+    id: "pb-spigen-10k-pps",
+    name: "Spigen 10000 20W",
+    brand: "Spigen",
+    capacityMah: 10000,
+    maxOutputW: 20,
+    ports: "1x USB-C + 1x USB-A",
+    pd: true,
+    pps: true,
+    price: 1199,
+    score: 8.8,
+    tags: ["PPS", "Kaliteli"],
+  },
+];
+
+export const powerbankBrands = ["Anker", "Ugreen", "Xiaomi", "Spigen"];
+export const capacityOptions = [5000, 10000, 20000];
+export const outputOptions = [10, 15, 20, 30, 45];
