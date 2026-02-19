@@ -1,3 +1,7 @@
+/* =========================
+   ŞARJ ALETLERİ
+========================= */
+
 export const chargers = [
   {
     id: "spigen-gan-65",
@@ -38,50 +42,16 @@ export const chargers = [
     score: 8.1,
     tags: ["PD"],
   },
-  {
-    id: "ugreen-65w",
-    name: "Ugreen 65W",
-    brand: "Ugreen",
-    powerW: 65,
-    ports: "2x USB-C + 1x USB-A",
-    pd: true,
-    pps: true,
-    gan: true,
-    price: 1299,
-    score: 7.3,
-    tags: ["GaN", "PPS"],
-  },
-  {
-    id: "baseus-65w",
-    name: "Baseus 65W",
-    brand: "Baseus",
-    powerW: 65,
-    ports: "2x USB-C + 1x USB-A",
-    pd: true,
-    pps: true,
-    gan: true,
-    price: 1199,
-    score: 7.0,
-    tags: ["GaN", "PPS"],
-  },
 ];
 
 export const brands = ["Spigen", "Anker", "Ugreen", "Baseus"];
 export const powerOptions = [20, 30, 40, 45, 65, 100];
+
+/* =========================
+   POWERBANKLER
+========================= */
+
 export const powerbanks = [
-  {
-    id: "pb-anker-10k",
-    name: "Anker PowerCore 10000",
-    brand: "Anker",
-    capacityMah: 10000,
-    maxOutputW: 12,
-    ports: "1x USB-A",
-    pd: false,
-    pps: false,
-    price: 899,
-    score: 8.0,
-    tags: ["Kompakt", "Günlük"],
-  },
   {
     id: "pb-anker-20k-pd",
     name: "Anker 20000 PD",
@@ -94,32 +64,6 @@ export const powerbanks = [
     price: 1499,
     score: 8.6,
     tags: ["PD", "Yüksek Kapasite"],
-  },
-  {
-    id: "pb-ugreen-10k-pps",
-    name: "Ugreen 10000 20W",
-    brand: "Ugreen",
-    capacityMah: 10000,
-    maxOutputW: 20,
-    ports: "1x USB-C + 1x USB-A",
-    pd: true,
-    pps: true,
-    price: 999,
-    score: 8.4,
-    tags: ["PPS", "Hızlı Şarj"],
-  },
-  {
-    id: "pb-xiaomi-20k",
-    name: "Xiaomi 20000 22.5W",
-    brand: "Xiaomi",
-    capacityMah: 20000,
-    maxOutputW: 22.5,
-    ports: "2x USB-A + 1x USB-C",
-    pd: true,
-    pps: false,
-    price: 1099,
-    score: 8.2,
-    tags: ["F/P", "Yüksek Kapasite"],
   },
   {
     id: "pb-spigen-10k-pps",
@@ -139,3 +83,52 @@ export const powerbanks = [
 export const powerbankBrands = ["Anker", "Ugreen", "Xiaomi", "Spigen"];
 export const capacityOptions = [5000, 10000, 20000];
 export const outputOptions = [10, 15, 20, 30, 45];
+
+/* =========================
+   KABLOLAR (TEK VE NET)
+========================= */
+
+export const cables = [
+  {
+    id: "c1",
+    brand: "Anker",
+    name: "Anker USB-C to USB-C 100W",
+    type: "USB-C → USB-C",
+    maxPowerW: 100,
+    pd: true,
+    eMarker: true,
+    lengthM: 1.8,
+    braided: true,
+    price: 499,
+    score: 8.7,
+    tags: ["100W", "PD", "E-Marker", "Laptop Uyumlu"],
+  },
+  {
+    id: "c2",
+    brand: "Spigen",
+    name: "Spigen USB-C to USB-C 60W",
+    type: "USB-C → USB-C",
+    maxPowerW: 60,
+    pd: true,
+    eMarker: false,
+    lengthM: 1.2,
+    braided: true,
+    price: 349,
+    score: 8.3,
+    tags: ["60W", "PD", "Telefon"],
+  },
+  {
+    id: "c3",
+    brand: "Baseus",
+    name: "Baseus USB-A to USB-C 18W",
+    type: "USB-A → USB-C",
+    maxPowerW: 18,
+    pd: false,
+    eMarker: false,
+    lengthM: 1,
+    braided: true,
+    price: 199,
+    score: 7.6,
+    tags: ["Günlük", "Uygun Fiyat"],
+  },
+];
